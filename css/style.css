@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@800&family=Montserrat:wght@300&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*Que hace? owo: incluye el paddinng, border y margin para poder calcular las dimensiones de la pagina*/
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    flex-wrap: wrap;
+}
+html{
+    scroll-behavior: smooth;/*para deslizar de manera suave*/
+}
+header{
+    width: 100%;
+    height: 80px;
+    margin-top: 45px;
+    position: fixed;/* Que hace >:3? al hacer scroll el header se queda donde esta*/
+    z-index: 1;  /* Que es xddd?: acomoda las imagenes, ordena los elementos que estan superpuestos, para controlas cual esta delante y cual detras*/
+}
+.container_menu{
+    max-width: 1800px;/* cantidad de espacio para el justify-content*/
+    height: 100%;
+    margin: auto;
+    display: flex;/*hace que el contenido se alinee horizontalmente( se aplica a los contenedores, para que los elementos hagan esa accion)*/
+    justify-content: space-between;/*espacio entre ambos, entre el logo y el menu*/
+    flex-wrap: wrap;
+}
+.logo{
+    height: 100%;/* se adapta al tamano del padre que en este caso seria el .container_menu*/
+    display:flex;
+    align-items:center ;/*se alinea al centro*/
+}
+.logo img{
+    width: 180px;
+}
+.logo p{
+    font-size: 40px;
+    color: #fff;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    background: #5d5a5a;
+    border-radius: 50px;
+    padding: 15px 20px;
+}
+.menu{
+    display: flex;
+    align-items: center;
+}
+.menu ul{
+    display: flex;
+}
+.menu ul li {
+    list-style: none; /*Elimina la decoracion de la lista*/
+    margin-left: 30px;
+}
+.menu ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    text-transform: uppercase;/* Pone el texto en mayusculas*/
+}
+#menusel{
+    background: #5d5a5a;
+    padding: 18px 40px;
+    border-radius: 50px;
+
+}
+/*Cover*/
+.container_cover{
+    width: 1920px;
+    height: 1080px;
+    background-image: url(../images/back.jpg); /* el ../ es para salir de la carpeta en la que estabamos*/
+    background-position: center;
+    background-size: 1920px 1080px;
+    background-repeat: no-repeat;
+    flex-wrap: wrap;
+}
+.cover{
+    max-width: 1920px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container_cover .text{
+    max-width: 400px;
+    margin-left: 420px;
+}
+.container_cover .text h1{
+    font-size: 35px;
+    font-weight: 600;
+    color: #fff;
+}
+.container_cover .text p{
+    font-size: 15px;
+    margin-top: 40px;
+    max-width: 400px;
+    color: #fff;
+}
+.container_cover .text input{
+    padding: 18px 80px;
+    border: none;
+    font-size: 17px;
+    border-radius: 50px;
+    margin-top: 35px;
+    background: linear-gradient(to right, #dfded6, #C3C0B3);/* para hacer el degradado*/
+    color: #5d5a5a;
+    cursor: pointer;/*para poner la manito asjdsajdk*/
+    box-shadow: 1px 1px 30px -12px #C3C0B3;/*sombra sobre el boton*/
+    transition: all 350ms; /*transicion para la iluminacion*/
+}
+.container_cover .text input:hover{
+    box-shadow: 1px 1px 30px -6px #C3C0B3;/* ilumina al tocar el boton*/
+}
+.container_cover .jpg img{
+    width: 500px;
+    margin-right: 200px;
+    animation: movexd 2s linear infinite;/* identificador para la animacion, duracion de la animacion, el tipo de animacion, infinito*/
+}
+/*Animacion*/
+@keyframes movexd{
+    0%{ 
+        transform: translateY(15px); /*cuando la animacion va por el 0% la imagen se va a mover 15px en el eje Y*/
+    }
+    50%{
+        transform: translateY(0px);/*cuando la animacion va por el 0% la imagen se va a mover 0px en el eje Y*/
+    }
+    100%{
+        transform: translateY(15px);/*cuando la animacion va por el 100% la imagen se va a volver a mover 15px en el eje Y*/
+    }
+} 
+/*Secciones*/
+.owo{
+    height: 100px;
+    width: 500px;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    margin-left: 35%;
+    background-color: #5d5a5a; 
+    color: #fff;   
+    font-size: 60px;
+    animation: destacado 2s linear infinite;
+    padding: 18px 40px;
+    border-radius: 50px;
+}
+@keyframes destacado {
+    0%{ 
+        transform: translateY(15px); /*cuando la animacion va por el 0% la imagen se va a mover 15px en el eje Y*/
+    }
+    50%{
+        transform: translateY(0px);/*cuando la animacion va por el 0% la imagen se va a mover 0px en el eje Y*/
+    }
+    100%{
+        transform: translateY(15px);/*cuando la animacion va por el 100% la imagen se va a volver a mover 15px en el eje Y*/
+    }
+    
+}
+.container_destacado{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    height: 430px;
+    flex-wrap: wrap; /* esta propiedad hace que los objetos o elementos se acomoden de acuerdo al navegador*/
+    justify-content: center;
+    margin: auto;
+}
+.container_destacado .card{
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px #5d5a5a;
+    overflow: hidden;
+    margin: 30px;
+    text-align: center;
+    transition: all 0.30ms;
+}
+.container_destacado .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0px 12px 16px #5d5a5a;
+}
+.container_destacado .card img{
+    width: 330px;
+    height: 220px;
+}
+.container_destacado .card h1{
+    font-weight: 600;
+}
+.container_destacado .card p{
+    padding: 20px;
+}
+.container_destacado .card a{
+    background: #5d5a5a;
+    font-weight: 500;
+    padding: 5px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #fff;
+}
+.container_destacado{
+    scroll-margin-top: 30px;
+}
+/*Seccion 2*/
+.ti{
+    text-align: center;
+    padding-top: 390px;
+}
+.ti{
+    height: 100px;
+    width: 500px;
+    text-align: center;
+    margin-top: 300px;
+    margin-bottom: 150px;
+    margin-left: 35%;
+    background-color: #5d5a5a; 
+    color: #fff;   
+    font-size: 60px;
+    animation: destacado 2s linear infinite;
+    padding: 18px 40px;
+    border-radius: 50px;
+}
+.map{
+    margin-bottom: 300px;
+}
