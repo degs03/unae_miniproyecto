@@ -226,3 +226,54 @@ header{
 .map{
     margin-bottom: 300px;
 }
+footer{
+    display: block;
+    width: 100%;
+    border-top: 1px solid #eee;
+    position: relative;
+    z-index: 100;
+}
+.container{
+    background: #e9e7e2;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.footer_top{
+    padding: 40px 0;
+}
+.footer_grid{
+    display: block;
+    width: 100%;
+}
+.footer_menu{
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    margin-right: 60px;
+    width: 100%;
+    max-width: 170px;
+    vertical-align: top;
+}
+.footer_grid ul li{
+    list-style: none;
+    margin-left: 30px;
+}
+.footer_grid a{
+    text-decoration: none;
+    color: #9c937c;
+}
+.footer_grid a:hover{
+    color: #5d5a5a;
+}
+.footer_li i{
+    margin-right: 5px;
+}
+.footer_bottom{
+    padding: 30px 0px;
+    text-align: center;
+    background: #5d5a5a;
+}
+
+.footer_bottom p{
+    color: #fff;
+}
